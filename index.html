@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>Flex Cards</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Fav icon/apple-touch-icon.png">
+    <link rel="icon" type="images/png" sizes="32x32" href="Fav icon/favicon-32x32.png">
+    <link rel="icon" type="images/png" sizes="16x16" href="Fav icon/favicon-16x16.png">
+    <link rel="manifest" href="Fav icon/site.webmanifest">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        <!-- navbar - we are making it fixed from top -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" style="padding-left: 3vw;">
+
+            <div class="container-fluid">
+                <!-- we are writing this line just to bring our toggle button to the right side -->
+                <a class="navbar-brand" href="#"></a>
+                <!-- toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <!-- links in the header -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- we are not writing active here just not to make it look bold, we can use class="text-muted" to mute the text color, but that attribute won't work here  -->
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <!-- we are writing active in all these list items just to make them look bold or highlighted -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Features</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Pricing</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">FAQs</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">About</a>
+                        </li>
+
+                    </ul>
+
+                    <form class="d-flex" role="search">
+                        <!-- search box -->
+                        <input class="form-control m-2" type="search" placeholder="Search..." aria-label="Search"
+                            style="background-color: black; color:white;">
+                        <!-- log-in button -->
+                        <button class="btn btn-outline-success m-2" type="button"
+                            style="background-color:black; color:white; width: max-content;"><a class="nav-link active"
+                                href="#">Login</a></button>
+                        <!-- sign-up button -->
+
+                        <!-- Note: m-2, me-2, sm-2, sr-2, these are by deafult styling porperties in bootstrap -->
+                        <button class="btn btn-outline-success m-2" type="button"
+                            style="background-color: rgb(210, 181, 16); color:black; width: 150px;"><a
+                                class="nav-link active" href="#"><b>Sign-up</b></a></button>
+
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- navbar is fixed at top, that's why we have to define some margins over here -->
+    <main style="margin: 11vh 2vh">
+
+        <div>
+            <h1 style="font-size: 9vh;">Flex Cards</h1>
+        </div>
+        <!-- Cards in a grid - responsive & auto adjustable -->
+        <!-- Note: In case you want more cards in a row, just change the row-cols number -->
+        <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-top: 1vh">
+            <div class="col">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/10026524/pexels-photo-10026524.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+
+                        <!-- group of button -->
+                        <!-- Note: remove the default button style and give border style to look like a UI  -->
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <button class="btn" style="border: 1px solid black;">
+                                <a href="#" class="btn"> View </a>
+                            </button>
+                            <button class="btn"
+                                style="border: 1px solid black; border-bottom-right-radius: 6px; border-top-right-radius: 6px;">
+                                <a href="#" class="btn"> Edit </a>
+                            </button>
+
+                            <!-- 9 mins muted text -->
+                            <div class="card text-end" style="width: 17rem; border: 0;">
+                                <div class="card-body">
+                                    <p class="card-text text-muted">9 min</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Note: another way to display last updated time at the bottom inside the card -->
+                        <!-- <p class="card-text" style="text-align:right;"><small class="text-muted">9 mins</small></p> -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/10026524/pexels-photo-10026524.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+
+                        <!-- group of button -->
+                        <!-- Note: remove the default button style and give border style to look like a UI  -->
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <button class="btn" style="border: 1px solid black;">
+                                <a href="#" class="btn"> View </a>
+                            </button>
+                            <button class="btn"
+                                style="border: 1px solid black; border-bottom-right-radius: 6px; border-top-right-radius: 6px;">
+                                <a href="#" class="btn"> Edit </a>
+                            </button>
+
+                            <!-- 9 mins muted text -->
+
+                            <div class="card text-end" style="width: 17rem; border: 0;">
+                                <div class="card-body">
+                                    <p class="card-text text-muted">9 min</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/10026524/pexels-photo-10026524.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+
+                        <!-- group of button -->
+                        <!-- Note: remove the default button style and give border style to look like a UI  -->
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <button class="btn" style="border: 1px solid black;">
+                                <a href="#" class="btn"> View </a>
+                            </button>
+                            <button class="btn"
+                                style="border: 1px solid black; border-bottom-right-radius: 6px; border-top-right-radius: 6px;">
+                                <a href="#" class="btn"> Edit </a>
+                            </button>
+
+                            <!-- 9 mins muted text -->
+                            <div class="card text-end" style="width: 17rem; border: 0;">
+                                <div class="card-body">
+                                    <p class="card-text text-muted">9 min</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Note: another way to display last updated time at the bottom inside the card -->
+                        <!-- <p class="card-text" style="text-align:right;"><small class="text-muted">9 mins</small></p> -->
+
+                    </div>
+                </div>
+            </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white">
+
+        <div class="container-fluid p-5 pb-0" style="display: grid; grid-template-columns: repeat(2,1fr);">
+            <div class="container-fluid" style="height: 12vh;">
+                <form class="d-flex input-group w-auto" role="searchbox">
+                    <input type="search" class="form-control rounded " placeholder="Search..." aria-label="Search" aria-describedby="search-addon">
+                    <span style="margin: 1vh 2vh ;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                        </svg>
+                    </span>
+                </form>
+            </div>
+    
+            <div class="container-fluid" style="height: 12vh;">
+                <form class="d-flex input-group w-auto">
+                    <input type="email" class="form-control rounded" placeholder="Your email" aria-label="Enter email" aria-describedby="sign-up">
+                    <button class="btn btn-outline-success" type="button" style="color:white; width: auto; border: 1px solid white; border-radius:0; margin-left: 2vh;">
+                        <a class="nav-link active" href="#">Sign-up</a></button>
+                </form>
+            </div>
+    
+            <div class="text-center p-3 text-muted" style="grid-column-start: 1; grid-column-end: -1; background-color: rgba(0, 0, 0, 0.2); height: 8vh;">
+                © 2020 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/" style="text-decoration:none">MDBootstrap.com</a>
+            </div>
+            
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
